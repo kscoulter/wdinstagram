@@ -1,0 +1,7 @@
+<form method="post" action="/<%= @entry.id %>">
+  <input type="hidden" name ="_method" value="put">   <!-- needed for some HTML limitation; server language -->
+  <input value="<%= @entry.author %>" type = "text" name="entry[author]">
+  <input value="<%= @entry.photo_url %>" type = "text" name="entry[photo_url]">
+  <input value="<%= @entry.date_taken %>" type = "text" name="entry[date_taken]">
+  <input type="submit" value="Update">
+</form>

@@ -19,12 +19,15 @@ end
 
 #edit
 get "/:id/edit" do
+  @entry = Entry.find(params[:id])
   erb :"/edit"
 end
 
 #update
 put "/:id" do
-
+  @entry = Entry.find(params[:id])
+  @entry.update(params[:entry])
+  redirect "/#{@entry.id}"
 end
 
 #destroy

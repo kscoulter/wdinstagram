@@ -1,0 +1,9 @@
+<h2><%= @entry.id %>. <%= @entry.author %></h2>
+<p><%=@entry.date_taken%></p>
+<h2><a href="/">Back</a><h2>
+<img src="<%=@entry.photo_url%>" class="expanded_photo"/>
+<p><a href="/<%=@entry.id%>/edit">Edit Entry</a></p>
+<form method="post" action="/<%= @entry.id %>">
+  <input name="_method" value="delete" type="hidden">
+  <input type="submit" value="Delete Submission">
+</form>
