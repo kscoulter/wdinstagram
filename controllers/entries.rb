@@ -44,7 +44,10 @@ end
 
 get "/:id/like" do
   @entry = Entry.find(params[:id])
+  @entry.like_counter += 1
+  @entry.save
+  # @entry.update(params[:like_counter]+1)
   puts "*" * 100
-  puts "#{@like_counter}"
+  puts "#{@entry.like_counter}"
   redirect "/#{@entry.id}"
 end

@@ -13,7 +13,7 @@
 <a href="/<%= @entry.id %>/like">
   <img src="http://www.endlessicons.com/wp-content/uploads/2013/06/heart-icon-614x460.png" class="icon">
 </a>
-<p><%=@counter%></p>
+<p><%=@entry.like_counter%></p>
 
 <form method="post" action="/<%= @entry.id %>">
   <input name="_method" value="delete" type="hidden">
