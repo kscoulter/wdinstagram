@@ -1,8 +1,20 @@
 <h2><%= @entry.id %>. <%= @entry.author %></h2>
+
 <p><%=@entry.date_taken%></p>
+
 <h2><a href="/">Back</a><h2>
+
 <img src="<%=@entry.photo_url%>" class="expanded_photo"/>
-<p><a href="/<%=@entry.id%>/edit">Edit Entry</a></p>
+
+<p>
+  <a href="/<%=@entry.id%>/edit">Edit Entry</a>
+</p>
+
+<a href="/<%= @entry.id %>/like">
+  <img src="http://www.endlessicons.com/wp-content/uploads/2013/06/heart-icon-614x460.png" class="icon">
+</a>
+<p><%=@counter%></p>
+
 <form method="post" action="/<%= @entry.id %>">
   <input name="_method" value="delete" type="hidden">
   <input type="submit" value="Delete Submission">

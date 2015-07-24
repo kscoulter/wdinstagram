@@ -15,6 +15,7 @@ post "/" do
   redirect "/#{@entry.id}"
 end
 
+
 #show (specific entry)
 get "/:id" do
   @entry = Entry.find(params[:id])
@@ -39,4 +40,11 @@ delete "/:id" do
   @entry = Entry.find(params[:id])
   @entry.destroy
   redirect "/"
+end
+
+get "/:id/like" do
+  @entry = Entry.find(params[:id])
+  puts "*" * 100
+  puts "#{@like_counter}"
+  redirect "/#{@entry.id}"
 end
