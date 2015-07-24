@@ -1,0 +1,8 @@
+
+<h2>WDInstagram Submissions</h2>
+<ul>
+  <% @entries.each do |entry| %>
+    <li><a href="/<%=entry.id%>"><%= entry.id %>, <%= entry.author %> </a></li>
+    <img class="photo" src="<%= entry.photo_url %>" />
+  <%end%>
+</ul>
