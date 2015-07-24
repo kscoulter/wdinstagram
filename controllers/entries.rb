@@ -3,18 +3,22 @@ get "/" do
   @entries = Entry.all
   erb :index
 end
-#show (specific entry)
-get "/:id" do
-  @entry = Entry.find(params[:id])
-  erb :"/show"
-end
+
 #new (create entry)
 get "/new" do
   erb :"/new"
 end
+
 #create
 post "/" do
+  @entry = Entry.create(params[:entry])
+  redirect "/#{@entry.id}"
+end
 
+#show (specific entry)
+get "/:id" do
+  @entry = Entry.find(params[:id])
+  erb :"/show"
 end
 
 #edit
@@ -32,5 +36,7 @@ end
 
 #destroy
 delete "/:id" do
-
+  @entry = Entry.find(params[:id])
+  @entry.destroy
+  redirect "/"
 end
