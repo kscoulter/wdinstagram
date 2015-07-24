@@ -52,3 +52,10 @@ Your app should have the following RESTful actions:
   * Get started here: [http://guides.rubyonrails.org/active_record_validations.html](http://guides.rubyonrails.org/active_record_validations.html)
 2. Move your form for new entries to the index (i.e., you won't have a separate page for creating posts).
 3. Do the same for comments.
+
+### User stories
+1. As a user I want to be able to view a picture because I am higly visual
+2. As a user I want to be able to post pictures because I am in love with my reflection
+3. As a user I want to be able to name the picture to give it context
+4. As a user I want to be able to delete a photo because I don't like it anymore
+5. As a user I want to be able to edit the picture name because I changed my mind
